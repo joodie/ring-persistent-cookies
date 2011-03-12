@@ -1,4 +1,4 @@
-ring-persistent-cookies gives you ring-middleware-cookies compatible
+ring-persistent-cookies gives you ring.middleware.cookies compatible
 cookies with an expiration date.
 
 (use 'ring.persistent-cookies)
