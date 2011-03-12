@@ -5,7 +5,9 @@ cookies with an expiration date.
 (use 'clj-time.core)
 
 (defn my-handler [r]
-   ;; process request
+   ;; process request r
+
+   ;; return cookies seq in response to set new cookies
    {:cookies [(persistent-cookie :remember-me "value-to-remember" 
               (date-time 2020 01 01) {:path "/"})]
     :body "Cookies set"})
