@@ -1,0 +1,17 @@
+ring-persistent-cookies gives you ring-middleware-cookies compatible
+cookies with an expiration date.
+
+(use 'ring.persistent-cookies)
+(use 'clj-time.core)
+
+(defn my-handler [r]
+   ;; process request
+   {:cookies [(persistent-cookie :remember-me "value-to-remember" 
+              (date-time 2020 01 01) {:path "/"})]
+    :body "Cookies set"})
+
+Copyright (C) 2011 Joost Diepenmaat, Zeekat Softwareontwikkeling
+
+joost@zeekat.nl - http://joost.zeekat.nl/
+
+Distributed under the Eclipse Public License, the same as Clojure.
